@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 const express = require("express");
 const app = express();
 const db = require('./config/keys').mongoURI;
+const users = require("./routes/api/users");
+const tweets = require("./routes/api/tweets");
+
 
 mongoose
 .connect(db, { useNewUrlParser: true })
@@ -10,6 +13,9 @@ mongoose
 
 
 app.get("/", (req, res) => res.send("Hello World!"));
+app.use("/api/users", users);
+app.use("/api/tweets", tweets);
+
 
 const port = process.env.PORT || 5000;
 
