@@ -4,8 +4,9 @@
   "description": "First mern project",
   "main": "app.js",
   "scripts": {
-   "start": "node app.js",
-   "server": "nodemon app.js"
+    "start": "node app.js",
+    "server:debug": "nodemon --inspect app.js",
+    "server": "nodemon app.js"
   },
   "author": "Jonnatan Ortiz",
   "license": "ISC",
