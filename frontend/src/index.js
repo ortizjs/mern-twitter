@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 // We will create this component shortly
 import Root from './components/root';
 
@@ -29,7 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const decodedUser = jwt_decode(localStorage.jwtToken);
 
         // Create a preconfigured state we can immediately add to our store
-        const preloadedState = { session: { isAuthenticated: true, user: decodedUser } };
+        const preloadedState = { 
+            session: { 
+                isAuthenticated: true, 
+                user: decodedUser 
+            } 
+        };
 
         store = configureStore(preloadedState);
 
