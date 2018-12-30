@@ -8,7 +8,7 @@ class TweetCompose extends React.Component {
         this.state = {
             text: "",
             newTweet: ""
-        }
+        };
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -24,7 +24,7 @@ class TweetCompose extends React.Component {
         };
 
         this.props.composeTweet(tweet);
-        this.setState({ text: '' })
+        this.setState({ text: '' });
     }
 
     update() {
